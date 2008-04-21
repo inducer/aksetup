@@ -1,0 +1,6 @@
+#! /bin/sh
+
+RES=$HOME/dam/research/software
+./update-aksetup $RES/hedge
+./update-aksetup $RES/meshpy
+./update-aksetup $RES/pylo
