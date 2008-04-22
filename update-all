@@ -1,6 +1,11 @@
 #! /bin/sh
 
 RES=$HOME/dam/research/software
-./update-aksetup $RES/hedge
 ./update-aksetup $RES/meshpy
 ./update-aksetup $RES/pylo
+./update-aksetup $RES/pymetis
+./update-aksetup $RES/pyublas
+./update-aksetup $RES/pyublasext
+./update-aksetup $RES/hedge
+./update-aksetup $RES/pyrticle
+./update-aksetup $HOME/work/tagpy
