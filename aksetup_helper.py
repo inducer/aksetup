@@ -47,9 +47,9 @@ class NumpyExtension(Extension):
 
 
 class PyUblasExtension(NumpyExtension):
-    def get_pyublas_incpath(self):
+    def get_module_include_path(self, name):
         from imp import find_module
-        file, pathname, descr = find_module("pyublas")
+        file, pathname, descr = find_module(name)
         from os.path import join
         return join(pathname, "..", "include")
 
@@ -57,7 +57,19 @@ class PyUblasExtension(NumpyExtension):
     def include_dirs(self):
         return self._include_dirs + [
                 self.get_numpy_incpath(),
-                self.get_pyublas_incpath(),
+                self.get_module_include_path("pyublas"),
+                ]
+
+
+
+
+class HedgeExtension(PyUblasExtension):
+    @property
+    def include_dirs(self):
+        return self._include_dirs + [
+                self.get_numpy_incpath(),
+                self.get_module_include_path("pyublas"),
+                self.get_module_include_path("hedge"),
                 ]
 
 
@@ -182,7 +194,7 @@ class ConfigSchema:
 
         import sys
         if not sys.platform.lower().startswith("win"):
-            self.global_conf_file = expanduser("/etc/aksetup-defaults.py")
+            self.global_conf_file = "/etc/aksetup-defaults.py"
         else:
             self.global_conf_file = None
 
@@ -258,8 +270,12 @@ class ConfigSchema:
 
     def have_global_config(self):
         import os
-        return (os.access(self.user_conf_file, os.R_OK) or 
-                os.access(self.global_conf_file, os.R_OK))
+        result = os.access(self.user_conf_file, os.R_OK)
+
+        if self.global_conf_file is not None:
+            result = result or os.access(self.global_conf_file, os.R_OK)
+
+        return result
 
     def have_config(self):
         import os
@@ -447,7 +463,8 @@ def configure_frontend():
     parser.add_option("--disable-static", help="Ignored", action="store_false")
     parser.add_option("--update-user", help="Update user config file (%s)" % schema.user_conf_file, 
             action="store_true")
-    parser.add_option("--update-global", help="Update global config file (%s)" % schema.global_conf_file, 
+    parser.add_option("--update-global", 
+            help="Update global config file (%s)" % schema.global_conf_file, 
             action="store_true")
 
     schema.add_to_configparser(parser, schema.read_config())
