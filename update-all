@@ -8,4 +8,6 @@ RES=$HOME/dam/research/software
 ./update-aksetup $RES/pyublasext
 ./update-aksetup $RES/hedge
 ./update-aksetup $RES/pyrticle
+./update-aksetup $RES/pycuda
+./update-aksetup $RES/boostmpi
 ./update-aksetup $HOME/work/tagpy
