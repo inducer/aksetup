@@ -10,4 +10,5 @@ RES=$HOME/dam/research/software
 ./update-aksetup $RES/pyrticle
 ./update-aksetup $RES/pycuda
 ./update-aksetup $RES/boostmpi
+./update-aksetup $RES/pyopencl
 ./update-aksetup $HOME/work/tagpy
