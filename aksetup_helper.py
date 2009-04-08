@@ -1,13 +1,8 @@
 # dealings with ez_setup ------------------------------------------------------
-import ez_setup
-
-ez_setup.use_setuptools()
-
-from setuptools import Extension
+from distutils import Extension
 
 def setup(*args, **kwargs):
-    from setuptools import setup
-    import traceback
+    from distutils import setup
     try:
         setup(*args, **kwargs)
     except KeyboardInterrupt:
