@@ -1,6 +1,6 @@
 #! /bin/sh
 
-RES=$HOME/dam/research/software
+RES=$HOME/research/software
 ./update-aksetup $RES/meshpy
 ./update-aksetup $RES/pylo
 ./update-aksetup $RES/pymetis
