@@ -5,7 +5,7 @@ distribute_setup.use_setuptools()
 import setuptools
 from setuptools import Extension
 
-if 'distribute' not in setuptools.__file__:
+if not hasattr(setuptools, "_distribute"):
     print("-------------------------------------------------------------------------")
     print("Setuptools conflict detected.")
     print("-------------------------------------------------------------------------")
