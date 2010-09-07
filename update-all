@@ -9,6 +9,6 @@ RES=$HOME/research/software
 ./update-aksetup $RES/hedge
 ./update-aksetup $RES/pyrticle
 ./update-aksetup $RES/pycuda
-./update-aksetup $RES/boostmpi
+./update-aksetup $HOME/work/archived-projects/boostmpi
 ./update-aksetup $RES/pyopencl
 ./update-aksetup $HOME/work/tagpy
