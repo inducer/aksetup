@@ -2,7 +2,7 @@
 
 RES=$HOME/research/software
 ./update-aksetup $RES/meshpy
-./update-aksetup $RES/pylo
+./update-aksetup $RES/pyvisfile
 ./update-aksetup $RES/pymetis
 ./update-aksetup $RES/pyublas
 ./update-aksetup $RES/pyublasext
