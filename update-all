@@ -1,6 +1,6 @@
 #! /bin/sh
 
-RES=$HOME/research/software
+RES=$HOME/src
 ./update-aksetup $RES/meshpy
 ./update-aksetup $RES/pyvisfile
 ./update-aksetup $RES/pymetis
