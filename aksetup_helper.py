@@ -522,7 +522,7 @@ class Libraries(StringListOption):
 class BoostLibraries(Libraries):
     def __init__(self, lib_base_name):
         Libraries.__init__(self, "BOOST_%s" % lib_base_name.upper(),
-                ["boost_%s-${BOOST_COMPILER}-mt" % lib_base_name],
+                ["boost_%s" % lib_base_name],
                 help="Library names for Boost C++ %s library (without lib or .so)"
                     % humanize(lib_base_name))
 
