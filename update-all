@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 RES=$HOME/src
 ./update-aksetup $RES/meshpy
 ./update-aksetup $RES/pyvisfile
@@ -7,8 +9,9 @@ RES=$HOME/src
 ./update-aksetup $RES/pyublas
 ./update-aksetup $RES/pyublasext
 ./update-aksetup $RES/hedge
-./update-aksetup $RES/pyrticle
+./update-aksetup $HOME/work/archived-projects/pyrticle
 ./update-aksetup $RES/pycuda
 ./update-aksetup $HOME/work/archived-projects/boostmpi
 ./update-aksetup $RES/pyopencl
 ./update-aksetup $HOME/work/tagpy
+./update-aksetup $RES/islpy
