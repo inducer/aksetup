@@ -1,6 +1,6 @@
 # dealings with ez_setup ------------------------------------------------------
-import distribute_setup
-distribute_setup.use_setuptools()
+import ez_setup
+ez_setup.use_setuptools()
 
 import setuptools
 from setuptools import Extension
