@@ -14,4 +14,5 @@ RES=$HOME/src
 ./update-aksetup $HOME/work/archived-projects/boostmpi
 ./update-aksetup $RES/pyopencl
 ./update-aksetup $HOME/work/tagpy
+./update-aksetup $HOME/pack/pyviennacl-dev
 ./update-aksetup $RES/islpy
