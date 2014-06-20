@@ -1,6 +1,11 @@
 #! /bin/sh
 
-set -x
+set -e
+
+if test "$1" = ""; then
+  echo "usage: $0 PROJECT_DIRECTORY"
+  exit 1
+fi
 
 cp README_SETUP.txt aksetup_helper.py configure.py "$1"
 rm -f "$1/ez_setup.py"
