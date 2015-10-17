@@ -7,7 +7,6 @@ RES=$HOME/src
 ./update-aksetup $RES/pyvisfile
 ./update-aksetup $RES/pymetis
 ./update-aksetup $RES/pyublas
-./update-aksetup $RES/pyublasext
 ./update-aksetup $RES/hedge
 ./update-aksetup $HOME/work/archived-projects/pyrticle
 ./update-aksetup $RES/pycuda
