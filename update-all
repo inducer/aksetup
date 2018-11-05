@@ -6,12 +6,9 @@ RES=$HOME/src
 ./update-aksetup $RES/meshpy
 ./update-aksetup $RES/pyvisfile
 ./update-aksetup $RES/pymetis
-./update-aksetup $RES/pyublas
-./update-aksetup $RES/hedge
 ./update-aksetup $HOME/work/archived-projects/pyrticle
 ./update-aksetup $RES/pycuda
 ./update-aksetup $HOME/work/archived-projects/boostmpi
 ./update-aksetup $RES/pyopencl
 ./update-aksetup $HOME/work/tagpy
-./update-aksetup $HOME/pack/pyviennacl-dev
 ./update-aksetup $RES/islpy
