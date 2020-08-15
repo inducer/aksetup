@@ -10,5 +10,4 @@ RES=$HOME/src
 ./update-aksetup $RES/pycuda
 ./update-aksetup $HOME/work/archived-projects/boostmpi
 ./update-aksetup $RES/pyopencl
-./update-aksetup $HOME/work/tagpy
 ./update-aksetup $RES/islpy
