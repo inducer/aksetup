@@ -42,10 +42,13 @@ def setup(*args, **kwargs):
 
 
 def get_numpy_incpath():
-    from imp import find_module
-    # avoid actually importing numpy, it screws up distutils
-    file, pathname, descr = find_module("numpy")
-    from os.path import join
+    from os.path import join, basename
+    from importlib.util import find_spec
+    origin = find_spec("numpy").origin
+    if origin is None:
+        raise RuntimeError("origin of numpy package not found")
+
+    pathname = basename(origin)
     return join(pathname, "core", "include")
 
 
