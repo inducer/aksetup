@@ -1,10 +1,10 @@
 .PHONY	: all install clean tags
 
 all: tags
-	${PYTHON_EXE} setup.py build
+	true
 
 install: all tags
-	${PYTHON_EXE} setup.py install
+	${PYTHON_EXE} -m pip install .
 
 clean:
 	rm -Rf build
